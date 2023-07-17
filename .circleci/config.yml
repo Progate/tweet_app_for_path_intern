@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://json.schemastore.org/circleciconfig.json
+# Create a config file by concatenating configs/*.yml and run it with pipeline
+# parameters that indicate which components are updated.
+
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:18.14
+      - image: cimg/mysql:8.0
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Run tests
+          command: npm run test:e2e
+workflows:
+  test:
+    jobs:
+      - build-and-test
