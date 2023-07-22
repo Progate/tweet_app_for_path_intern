@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test:e2e": "npm run db:reset:test && npm run db:seed:test && jest -c ./e2e/jest.config.js",
+    "test:e2e": "npm run db:reset:test && npm run db:seed:test && dotenv -e .env.test -- jest -c ./e2e/jest.config.js",
     "test:retweet": "npm run test:e2e -- usecases/retweet_post.ts -t 'Retweet post'",
     "test:retweet_btn": "npm run test:e2e -- post/show.ts -t 'Post show page after sign in retweet button is displayed'",
     "test:retweet_increase": "npm run test:e2e -- usecases/retweet_post.ts -t 'Retweet post the count increases by one'",
@@ -20,8 +20,8 @@
     "db:migrate:deploy": "prisma migrate deploy",
     "db:reset": "prisma migrate reset",
     "db:seed": "ts-node --transpile-only -r tsconfig-paths/register --files src/db/seed/development.ts",
-    "db:seed:test": "ts-node --transpile-only -r tsconfig-paths/register --files src/db/seed/test.ts",
-    "db:reset:test": "prisma migrate reset --force --skip-seed",
+    "db:seed:test": "dotenv -e .env.test -- ts-node --transpile-only -r tsconfig-paths/register --files src/db/seed/test.ts",
+    "db:reset:test": "dotenv -e .env.test -- prisma migrate reset --force --skip-seed",
     "start": "ts-node -r tsconfig-paths/register --files ./bin/run_server.ts"
   },
   "author": "",
