@@ -34,9 +34,10 @@ jobs:
       env:
         CI: true
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
-        DB_HOST: 127.0.0.1
-        DB_USER: root
-        DB_PASSWORD: password
-        DB_NAME: test
+        MYSQL_HOST: 127.0.0.1
+        MYSQL_USER: root
+        MYSQL_PASSWORD: password
+        MYSQL_PORT: 3306
+        MYSQL_DB: test
         DATABASE_URL: mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DB}
 
