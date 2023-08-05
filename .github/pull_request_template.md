@@ -1,5 +1,8 @@
 # Objective and links
 
+- Objective
+- Asana Task URL:
+
 <!--
 この変更が必要になった背景や変更の目的を書いてください。
 Asana のリンクや、もしあれば Google docs　や Slack threads など関連するリンクを貼ってください。
