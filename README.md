@@ -1,10 +1,13 @@
 # TweetApp
 
-test
-
 ## Install prerequisites
 
 - Node.js (18.x or newer)
+  - See <https://app.path.progate.com/tasks/PuSZdMDZJY_cksKGNxs4b/preview>
+- Puppeteer
+  - See <https://app.path.progate.com/tasks/CwBFxQbIm54hr-bxtmMn9/preview>
+- MySQL (8.x or newer)
+  - See <https://app.path.progate.com/tasks/sQ4PifQLeD6eHeTiJ0i5i/preview>
 
 ## Install
 
