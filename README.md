@@ -178,7 +178,7 @@ npm command list. call `npm run [command]`. for example:
 npm run test:e2e
 ```
 
-will run all tests in this project:
+will run all tests in this project.
 
 - `test:e2e`: run e2e test,
 - `watch`: start development mode,
